@@ -9,8 +9,7 @@ import java.util.Properties;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.events.EventFiringDecorator;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import com.crm.qa.util.TestUtil;
 
@@ -51,7 +50,16 @@ public class TestBase {
 		{
 			//System.setProperty("webdriver.chrome.driver", prop.getProperty("driver_path"));
 			WebDriverManager.chromedriver().setup();
-			driver= new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--headless"); //for headless mode
+			options.addArguments("--window-size=800,600");//The invisible browser window is only 800x600 in size
+			options.addArguments("start-maximized"); // open Browser in maximized mode
+			options.addArguments("disable-infobars"); // disabling infobars
+			options.addArguments("--disable-extensions"); // disabling extensions
+			options.addArguments("--disable-gpu"); // applicable to windows os only
+			options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+			options.addArguments("--no-sandbox");
+			driver= new ChromeDriver(options);
 		}
 //		e_driver= new EventFiringWebDriver(driver);
 //		eventlistner = new WebEventListener();
