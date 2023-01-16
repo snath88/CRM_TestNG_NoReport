@@ -29,7 +29,7 @@
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
     <version>7.6.0</version>
-   <!-- <scope>compile</scope>  -->
+   <scope>compile</scope> 
 	</dependency>
 	<!--compile  required for jenkins-->
 		<dependency>
