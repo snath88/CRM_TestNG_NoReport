@@ -9,7 +9,6 @@ package com.crm.qa.testcases;
 import java.io.IOException;
 
 import org.testng.Assert;
-import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -17,7 +16,6 @@ import org.testng.annotations.Test;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.BaseUrl;
 import com.crm.qa.pages.LoginPage;
-import com.crm.qa.util.RetryAnalyzer;
 import com.crm.qa.util.TestUtil;
 
 public class BaseUrlTest extends TestBase{
