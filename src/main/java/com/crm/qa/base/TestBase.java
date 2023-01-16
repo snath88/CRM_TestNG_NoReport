@@ -31,7 +31,7 @@ public class TestBase {
 		
 		try {
 			///CRMTest/src/main/java/com/crm/qa/config/config.properties
-			FileInputStream fp= new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
+			FileInputStream fp= new FileInputStream(System.getProperty("user.dir")+"/src/main/java/com/crm/qa/config/config.properties");
 			
 //			FileInputStream fp= new FileInputStream("/CRMTest/src/main/java/com/crm/qa/config/config.properties");
 			prop.load(fp);
